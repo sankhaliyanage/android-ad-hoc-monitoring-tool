@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity.MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+
+
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal">
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="HotSpot On/Off"
+                android:id="@+id/HotSpotOn_OffSwitch"
+                android:checked="false"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="0.65"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Network Status"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="0.37"/>
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/NetworkStatusDisplaytextView"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="0.44"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="Battery Status"
+                android:id="@+id/Battery_Status_Main_textView"
+                android:layout_weight="0.24"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/Battery_Status_Display_MaintextView"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="0.47"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/Battery_Status_Source_textView"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="0.28"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:weightSum="1"
+            android:layout_weight="0.05">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="Battery Voltage"
+                android:id="@+id/Battery_Voltage_Main_textView"
+                android:layout_weight="0.70"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <TextView
+                android:layout_width="103dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/Battery_Capacity_Display_Main_textView"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="0.30"/>
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/Battery_Temperature_Display_Main_textView"
+                android:gravity="center_vertical|center_horizontal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="0.05"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="Device activity"
+                android:layout_weight="0.42"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <TextView
+                android:layout_width="112dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/Device_Activity_Display_MaintextView"
+                android:gravity="center_vertical|center_horizontal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="0.05"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="fill_parent"
+                android:text=" Upload Rate"
+                android:id="@+id/Upload_Rate_Main_textView"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/Upload_Rate_Display_Main_textView"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="0.24"/>
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="fill_parent"
+                android:text="Download Rate"
+                android:id="@+id/Download_Rate_Main_textView"
+                android:layout_weight="0.58"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/Download_Rate_Display_Main_textView"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="0.07"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="0.05"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="fill_parent"
+                android:text="Total Upload"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/Throughput_Total_Upload"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="0.24"/>
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="fill_parent"
+                android:text="Total Download"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/Throughput_Total_Download"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="0.24"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.05">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="fill_parent"
+                android:text="Packets Upload"
+                android:gravity="center_vertical|center_horizontal"
+                />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/Wireless_Upload_Packets"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="0.24"/>
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="fill_parent"
+                android:text="Packets Download"
+                android:gravity="center_vertical|center_horizontal"
+                />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/Wireless_Download_Packets"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="0.24"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.05">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:weightSum="1"
+            android:layout_gravity="center_horizontal">
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="Auto Pilot"
+                android:id="@+id/Auto_Pilot_OnOff_Switch"
+                android:checked="false"
+                android:layout_weight="0.89"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Operating mode"
+                android:gravity="center_vertical|center_horizontal"
+                android:id="@+id/textView3"/>
+
+            <TextView
+                android:layout_width="117dp"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/Operating_Mode"
+                android:gravity="center_vertical|center_horizontal"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_gravity="center_horizontal">
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.05">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="Node Monitoring"
+                android:layout_weight="1.13"
+                android:id="@+id/Node_Monitoring_Main_textView"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View"
+                android:id="@+id/Button_NodeMonitoring"
+                android:layout_weight="0.93"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.05">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Protocol Statistics"
+                android:id="@+id/Protocol_Statistics_Main_textView"
+                android:layout_weight="0.99"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View"
+                android:id="@+id/Button_ProtocolStatistics"
+                android:layout_weight="0.86"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.05">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="Signal Strength"
+                android:id="@+id/Signal_Strength_Main_textView"
+                android:layout_weight="1.16"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="View"
+                android:id="@+id/Button_SignalStrength"
+                android:layout_weight="0.86"
+                android:gravity="center|center_horizontal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.05">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="Power Consumption"
+                android:id="@+id/Power_Consumption_Main_textView"
+                android:layout_weight="0.99"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View"
+                android:id="@+id/Button_PowerConsumption"
+                android:layout_weight="0.99"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

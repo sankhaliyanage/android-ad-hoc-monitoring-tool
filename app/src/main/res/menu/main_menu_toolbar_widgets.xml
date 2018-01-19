@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="Settings"
+        android:icon="@drawable/ic_toolbar_settings"
+        app:showAsAction="ifRoom"
+
+        />
+
+    <item
+        android:id="@+id/action_Rate_us"
+        android:title="Rate us"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_Help"
+        android:title="Help"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_Exit"
+        android:title="Exit"
+        app:showAsAction="never"
+    />
+</menu>
